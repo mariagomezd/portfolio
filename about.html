@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Maria Paula Gomez</title>
+    <meta
+      name="description"
+      content="Learn more about UX & UI designer Maria Paula Gomez, her background, and how she approaches design."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <span id="top" aria-hidden="true"></span>
+    <header class="site-header">
+      <div class="floating-nav">
+        <a href="index.html" class="nav-name">
+          <span class="nav-name-main">Maria Paula Gomez</span>
+          <span class="nav-name-sub">UX &amp; UI Designer</span>
+        </a>
+        <nav class="main-nav">
+          <div class="nav-links">
+            <a href="index.html#projects">Work</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="about.html">About me</a>
+          </div>
+          <a href="index.html#contact" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-centered">
+          <p class="eyebrow">About</p>
+          <h1 class="hero-title">UX &amp; UI designer with a media design background.</h1>
+          <p class="hero-text hero-text-centered">
+            I’m a UX &amp; UI designer with a multimedia design background, passionate about
+            understanding how people think, feel, and move through digital products. I’m especially
+            interested in how we can reduce complexity so that interfaces feel intuitive instead of
+            overwhelming.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container section-inner two-col">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2>Design grounded in people, clarity, and calm experiences.</h2>
+          </div>
+          <div class="section-body">
+            <p>
+              I approach projects by asking questions first: How do users think? What do they
+              actually need? Where do things get confusing? From there, I move into user flows,
+              wireframes, visual systems, and interactive prototypes that connect user needs with
+              clear, purposeful interfaces.
+            </p>
+            <p>
+              My background in multimedia and visual design helps me balance structure and emotion:
+              I care about hierarchy, rhythm, and pacing just as much as colors and type. I enjoy
+              turning messy ideas into simple journeys that feel calm and understandable.
+            </p>
+            <p>
+              I’m currently focusing on growing as a UX &amp; UI designer through hands-on projects,
+              collaboration, and continuous learning. I’m excited about opportunities where I can
+              contribute to meaningful products, learn from teammates, and keep improving the way I
+              think about design.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Maria Paula Gomez · UX &amp; UI Designer</p>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      const yearSpan = document.getElementById("year");
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
+</html>
+

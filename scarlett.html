@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scarlett | Maria Paula Gomez</title>
+    <meta
+      name="description"
+      content="Scarlett — UX/UI for jewelry shopping app concept. Design project by Maria Paula Gomez."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <span id="top" aria-hidden="true"></span>
+    <header class="site-header">
+      <div class="floating-nav">
+        <a href="index.html" class="nav-name">
+          <span class="nav-name-main">Maria Paula Gomez</span>
+          <span class="nav-name-sub">UX &amp; UI Designer</span>
+        </a>
+        <nav class="main-nav">
+          <div class="nav-links">
+            <a href="index.html#projects">Work</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="about.html">About me</a>
+          </div>
+          <a href="index.html#contact" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero project-hero">
+        <div class="container hero-centered">
+          <p class="eyebrow">Project</p>
+          <h1 class="hero-title">Scarlett</h1>
+          <p class="hero-text hero-text-centered">
+            UX/UI for jewelry shopping app concept
+          </p>
+          <div class="project-hero-grid">
+            <div class="project-hero-image">
+              <img src="images/scarlett-01.jpg" alt="Scarlett app screen" />
+            </div>
+            <div class="project-hero-image">
+              <img src="images/scarlett-main.jpg" alt="Scarlett — UX/UI for jewelry shopping app concept" />
+            </div>
+            <div class="project-hero-image">
+              <img src="images/scareltt-02.jpg" alt="Scarlett app screen" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="project-detail">
+        <div class="container section-inner two-col">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h2>About this project</h2>
+          </div>
+          <div class="section-body">
+            <p>
+              Scarlett is a UX/UI concept for a jewelry shopping app. The goal was to create an
+              interface that feels elegant and easy to browse, so users can discover and explore
+              products without friction.
+            </p>
+            <p>
+              Here you can add your role, research insights, key design decisions, and outcomes.
+              You can also add more screens or a link to the full prototype.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Maria Paula Gomez · UX &amp; UI Designer</p>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      const yearSpan = document.getElementById("year");
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
+</html>
