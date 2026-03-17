@@ -20,9 +20,20 @@
     <span id="top" aria-hidden="true"></span>
     <header class="site-header">
       <div class="floating-nav">
-        <a href="index.html" class="nav-name">
-          <span class="nav-name-main">Maria Paula Gomez</span>
-          <span class="nav-name-sub">UX &amp; UI Designer</span>
+        <a href="index.html" class="nav-name" aria-label="Home">
+          <img
+            class="nav-logo"
+            src="images/logo.png"
+            alt=""
+            width="36"
+            height="36"
+            loading="eager"
+            decoding="async"
+          />
+          <span class="nav-name-text">
+            <span class="nav-name-main">Maria Paula Gomez</span>
+            <span class="nav-name-sub">UX &amp; UI Designer</span>
+          </span>
         </a>
         <nav class="main-nav">
           <div class="nav-links">
@@ -53,7 +64,7 @@ just about how something looks, it’s about how it works for real people.
             </p>
           </div>
           <div class="hero-photo">
-            <img src="images/hero-photo.jpg" alt="Maria Gomez, UX & UI Designer" />
+            <img src="images/maria.jpg" alt="Maria Gomez, UX & UI Designer" />
           </div>
         </div>
       </section>
@@ -68,8 +79,20 @@ just about how something looks, it’s about how it works for real people.
             <span>Figma</span>
             <span>Adobe Photoshop</span>
             <span>Adobe Illustrator</span>
+            <span>UX &amp; UI Design</span>
+            <span>Interaction &amp; Visual Design</span>
+            <span>Design Systems</span>
+            <span>Figma</span>
+            <span>Adobe Photoshop</span>
+            <span>Adobe Illustrator</span>
           </div>
           <div class="info-strip-inner" aria-hidden="true">
+            <span>UX &amp; UI Design</span>
+            <span>Interaction &amp; Visual Design</span>
+            <span>Design Systems</span>
+            <span>Figma</span>
+            <span>Adobe Photoshop</span>
+            <span>Adobe Illustrator</span>
             <span>UX &amp; UI Design</span>
             <span>Interaction &amp; Visual Design</span>
             <span>Design Systems</span>
@@ -94,7 +117,7 @@ just about how something looks, it’s about how it works for real people.
               <div class="project-content">
                 <p class="project-title-line">
                   <span class="project-title-main">Iterra</span>
-                  <span class="project-title-sub">App prototype for trip planning</span>
+                  <span class="project-title-sub">App Prototype for Trip Planning</span>
                 </p>
               </div>
             </div>
@@ -109,7 +132,7 @@ just about how something looks, it’s about how it works for real people.
                 <div class="project-content">
                   <p class="project-title-line">
                     <span class="project-title-main">Scarlett</span>
-                    <span class="project-title-sub">UX/UI for jewelry shopping app concept</span>
+                    <span class="project-title-sub">UX/UI for Jewelry Shopping App Concept</span>
                   </p>
                 </div>
               </div>
@@ -122,7 +145,7 @@ just about how something looks, it’s about how it works for real people.
                 <div class="project-content">
                   <p class="project-title-line">
                     <span class="project-title-main">Ultimate Guitar Tabs</span>
-                    <span class="project-title-sub">UX research &amp; interface redesign</span>
+                    <span class="project-title-sub">UX Research &amp; Interface Redesign</span>
                   </p>
                 </div>
               </div>
@@ -140,74 +163,70 @@ just about how something looks, it’s about how it works for real people.
 
           <div class="skills-unfold-wrapper" id="skills-grid">
             <div class="skills-grid">
-              <!-- Design dropdown -->
-              <div class="skill-item">
-                <button class="skill-card" type="button">
-                  <span class="skill-card-text">
-                    <span class="skill-card-title">Design</span>
-                    <span class="skill-card-subtitle">UX flows, UI, and systems</span>
+              <details class="skill-accordion">
+                <summary class="skill-summary">
+                  <span class="skill-summary-text">
+                    <span class="skill-summary-title">Design</span>
+                    <span class="skill-summary-subtitle">UX flows, UI, and systems</span>
                   </span>
-                  <span class="skill-card-arrow" aria-hidden="true">▾</span>
-                </button>
-                <div class="skill-dropdown">
-                  <p class="skill-dropdown-text">
+                  <span class="skill-summary-arrow" aria-hidden="true">&gt;</span>
+                </summary>
+                <div class="skill-panel">
+                  <p class="skill-panel-text">
                     I connect user needs with clear structures and visuals: mapping journeys,
                     creating flows, and turning them into interfaces that feel calm and intuitive.
                   </p>
-                  <ul class="skill-dropdown-list">
+                  <ul class="skill-panel-list">
                     <li>UX research basics (interviews, surveys, simple usability checks)</li>
                     <li>User flows, site maps, and low‑ to high‑fidelity wireframes</li>
                     <li>High‑fidelity UI design for responsive web and mobile</li>
                     <li>Design systems, components, and visual style guidelines</li>
                   </ul>
                 </div>
-              </div>
+              </details>
 
-              <!-- Tools dropdown -->
-              <div class="skill-item">
-                <button class="skill-card" type="button">
-                  <span class="skill-card-text">
-                    <span class="skill-card-title">Tools</span>
-                    <span class="skill-card-subtitle">Figma, Adobe Suite, basics of code</span>
+              <details class="skill-accordion">
+                <summary class="skill-summary">
+                  <span class="skill-summary-text">
+                    <span class="skill-summary-title">Tools</span>
+                    <span class="skill-summary-subtitle">Figma, Adobe Suite, basics of code</span>
                   </span>
-                  <span class="skill-card-arrow" aria-hidden="true">▾</span>
-                </button>
-                <div class="skill-dropdown">
-                  <p class="skill-dropdown-text">
+                  <span class="skill-summary-arrow" aria-hidden="true">&gt;</span>
+                </summary>
+                <div class="skill-panel">
+                  <p class="skill-panel-text">
                     I use a mix of design and visual tools to move from quick ideas to polished
                     prototypes that are ready to share with teams and stakeholders.
                   </p>
-                  <ul class="skill-dropdown-list">
+                  <ul class="skill-panel-list">
                     <li>Figma (components, auto layout, interactive prototypes)</li>
                     <li>Adobe Photoshop and Illustrator for visual assets</li>
                     <li>Basic HTML and CSS to understand layouts and handoff</li>
                     <li>Organizing design files so they are easy to navigate</li>
                   </ul>
                 </div>
-              </div>
+              </details>
 
-              <!-- Ways of working dropdown -->
-              <div class="skill-item">
-                <button class="skill-card" type="button">
-                  <span class="skill-card-text">
-                    <span class="skill-card-title">Ways of working</span>
-                    <span class="skill-card-subtitle">Process, collaboration, and feedback</span>
+              <details class="skill-accordion">
+                <summary class="skill-summary">
+                  <span class="skill-summary-text">
+                    <span class="skill-summary-title">My Working Style</span>
+                    <span class="skill-summary-subtitle">Process, collaboration, and feedback</span>
                   </span>
-                  <span class="skill-card-arrow" aria-hidden="true">▾</span>
-                </button>
-                <div class="skill-dropdown">
-                  <p class="skill-dropdown-text">
+                  <span class="skill-summary-arrow" aria-hidden="true">&gt;</span>
+                </summary>
+                <div class="skill-panel">
+                  <p class="skill-panel-text">
                     I like working in an iterative way: sharing early, collecting feedback,
                     and translating it into clear next steps for the product.
                   </p>
-                  <ul class="skill-dropdown-list">
+                  <ul class="skill-panel-list">
                     <li>Iterative design with regular feedback loops</li>
                     <li>Explaining design decisions in a simple, friendly way</li>
-                    <li>Collaborating with developers, PMs, and stakeholders</li>
                     <li>Documenting flows and decisions to keep everyone aligned</li>
                   </ul>
                 </div>
-              </div>
+              </details>
             </div>
           </div>
         </div>
@@ -218,7 +237,7 @@ just about how something looks, it’s about how it works for real people.
       <section class="section section-alt" id="contact">
         <div class="container section-inner">
           <p class="eyebrow">Contact</p>
-          <h2>Let’s connect.</h2>
+          <h2>Let’s connect! 📩</h2>
           <div class="contact-icons">
               <a
                 href="mailto:mariagomezd1104@gmail.com"
@@ -248,14 +267,25 @@ just about how something looks, it’s about how it works for real people.
           </div>
         </div>
       </section>
-    </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Maria Paula Gomez · UX & UI Designer</p>
-        <a href="#top" class="back-to-top">Back to top ↑</a>
-      </div>
-    </footer>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-brand">
+            <img
+              class="footer-logo"
+              src="images/logo.png"
+              alt=""
+              width="28"
+              height="28"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>© <span id="year"></span> Maria Paula Gomez · UX &amp; UI Designer</p>
+          </div>
+          <a href="#top" class="back-to-top">Back to top ↑</a>
+        </div>
+      </footer>
+    </main>
 
     <script>
       // Simple script to keep the footer year updated
@@ -263,25 +293,6 @@ just about how something looks, it’s about how it works for real people.
       if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
       }
-
-      // Simple dropdown behavior for skills: click title to open/close its content
-      const skillItems = document.querySelectorAll(".skill-item");
-      skillItems.forEach((item) => {
-        const button = item.querySelector(".skill-card");
-        if (!button) return;
-
-        button.addEventListener("click", () => {
-          const isOpen = item.classList.contains("is-open");
-
-          // Close all items
-          skillItems.forEach((it) => it.classList.remove("is-open"));
-
-          // Re-open this one if it was closed
-          if (!isOpen) {
-            item.classList.add("is-open");
-          }
-        });
-      });
     </script>
   </body>
 </html>

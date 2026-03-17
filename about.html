@@ -20,9 +20,20 @@
     <span id="top" aria-hidden="true"></span>
     <header class="site-header">
       <div class="floating-nav">
-        <a href="index.html" class="nav-name">
-          <span class="nav-name-main">Maria Paula Gomez</span>
-          <span class="nav-name-sub">UX &amp; UI Designer</span>
+        <a href="index.html" class="nav-name" aria-label="Home">
+          <img
+            class="nav-logo"
+            src="images/logo.png"
+            alt=""
+            width="36"
+            height="36"
+            loading="eager"
+            decoding="async"
+          />
+          <span class="nav-name-text">
+            <span class="nav-name-main">Maria Paula Gomez</span>
+            <span class="nav-name-sub">UX &amp; UI Designer</span>
+          </span>
         </a>
         <nav class="main-nav">
           <div class="nav-links">
@@ -80,7 +91,18 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© <span id="year"></span> Maria Paula Gomez · UX &amp; UI Designer</p>
+        <div class="footer-brand">
+          <img
+            class="footer-logo"
+            src="images/logo.png"
+            alt=""
+            width="28"
+            height="28"
+            loading="lazy"
+            decoding="async"
+          />
+          <p>© <span id="year"></span> Maria Paula Gomez · UX &amp; UI Designer</p>
+        </div>
         <a href="#top" class="back-to-top">Back to top ↑</a>
       </div>
     </footer>
