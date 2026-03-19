@@ -35,13 +35,23 @@
             <span class="nav-name-sub">UX &amp; UI Designer</span>
           </span>
         </a>
-        <nav class="main-nav">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="main-nav" id="primary-nav">
           <div class="nav-links">
             <a href="#projects">Work</a>
             <a href="#skills">Skills</a>
             <a href="about.html">About me</a>
+            <a href="#contact" class="nav-cta nav-cta-mobile">Contact</a>
           </div>
-          <a href="#contact" class="nav-cta">Contact</a>
+          <a href="#contact" class="nav-cta nav-cta-desktop">Contact</a>
         </nav>
       </div>
     </header>
@@ -287,6 +297,7 @@ just about how something looks, it’s about how it works for real people.
       </footer>
     </main>
 
+    <script src="js/main.js"></script>
     <script>
       // Simple script to keep the footer year updated
       const yearSpan = document.getElementById("year");

@@ -35,13 +35,23 @@
             <span class="nav-name-sub">UX &amp; UI Designer</span>
           </span>
         </a>
-        <nav class="main-nav">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="main-nav" id="primary-nav">
           <div class="nav-links">
             <a href="index.html#projects">Work</a>
             <a href="index.html#skills">Skills</a>
             <a href="about.html">About me</a>
+            <a href="index.html#contact" class="nav-cta nav-cta-mobile">Contact</a>
           </div>
-          <a href="index.html#contact" class="nav-cta">Contact</a>
+          <a href="index.html#contact" class="nav-cta nav-cta-desktop">Contact</a>
         </nav>
       </div>
     </header>
@@ -156,6 +166,7 @@ and shopping experience refinement.
       </div>
     </footer>
 
+    <script src="js/main.js"></script>
     <script>
       const yearSpan = document.getElementById("year");
       if (yearSpan) {
