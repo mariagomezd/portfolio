@@ -43,6 +43,14 @@ body {
   position: relative;
 }
 
+p,
+li,
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+}
+
 /* Invisible anchor at the very top so "Back to top" scrolls to the top of the page */
 #top {
   position: absolute;
@@ -56,6 +64,30 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 1000;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  background: #1b1026;
+  color: #ffffff;
+  font-weight: 600;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #7c3aed;
+  outline-offset: 3px;
 }
 
 img {
@@ -103,6 +135,12 @@ img {
   transform: translateY(-1px);
 }
 
+.main-nav a[aria-current="page"] {
+  color: var(--text);
+  border-color: var(--border-subtle);
+  background: #fbd3ea;
+}
+
 .hero {
   padding: 3rem 0 0;
 }
@@ -134,15 +172,6 @@ img {
   object-fit: cover;
 }
 
-.hero-photo.placeholder span {
-  font-size: 0.85rem;
-  color: var(--muted);
-  border-radius: var(--radius-pill);
-  padding: 0.45rem 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px dashed rgba(148, 163, 184, 0.7);
-}
-
 /* Project pages: three images side by side */
 .project-hero-grid {
   display: grid;
@@ -170,6 +199,48 @@ img {
   object-fit: cover;
 }
 
+/* Featured case-study image right under project title */
+.project-featured-image-section {
+  padding-top: 1rem;
+}
+
+.project-featured-image-section .project-hero-grid {
+  margin-top: 0;
+}
+
+.project-featured-image {
+  height: auto;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2.25rem !important;
+  box-shadow: var(--shadow-soft);
+  background: #c7e9e9;
+  overflow: hidden !important;
+}
+
+.project-featured-image img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 2.25rem !important;
+  clip-path: inset(0 round 2.25rem);
+}
+
+.project-featured-image-contained {
+  height: 45vh;
+  max-height: 45vh;
+}
+
+.project-featured-image-contained img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
 .hero-centered {
   padding: 1.8rem 0 var(--section-spacing);
   text-align: center;
@@ -190,6 +261,7 @@ img {
 .project-hero .hero-centered {
   max-width: 100%;
   align-items: stretch;
+  padding-bottom: 0.75rem;
 }
 
 .project-hero .hero-text-centered {
@@ -246,7 +318,8 @@ h3 {
 .hero-text {
   margin: 1.25rem 0 1.75rem;
   color: var(--muted);
-  max-width: 34rem;
+  max-width: 44rem;
+  font-size: 1.22rem; /* bigger so the hero paragraph takes more space */
 }
 
 .info-strip {
@@ -401,6 +474,37 @@ h3 {
   padding: var(--section-spacing) 0;
 }
 
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Case study: last block ends with a divider; avoid stacking extra section padding */
+.section.section--flush-bottom {
+  padding-bottom: 0;
+}
+
+/* Case study: stack sections with dividers — avoid doubling .section padding */
+#design-process {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#branding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#branding + .section {
+  padding-top: 0;
+}
+
 .section-alt {
   background: var(--bg-alt);
 }
@@ -412,6 +516,12 @@ h3 {
   align-items: flex-start;
 }
 
+.role-image-full {
+  /* Put the phones image on its own row and span the full width */
+  grid-column: 1 / -1;
+  margin-top: 1.25rem;
+}
+
 .section-body {
   color: var(--muted);
   display: flex;
@@ -419,13 +529,308 @@ h3 {
   gap: 0.9rem;
 }
 
+.section-body p {
+  /* Avoid default paragraph margins interfering with the flex `gap` (especially above dividers) */
+  margin: 0;
+}
+
 .section-divider {
   border-top: 1px solid var(--border-subtle);
   margin: 2.25rem 0;
 }
 
+.problem-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.45rem;
+}
+
+.audience-text-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.45rem;
+}
+
+.competitive-research-wrap {
+  width: 100%;
+}
+
+.competitive-research-title {
+  font-size: 1.8rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.competitive-research-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+}
+
+.competitive-research-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.competitive-research-table th,
+.competitive-research-table td {
+  padding: 0.85rem 1rem;
+  vertical-align: top;
+}
+
+.competitive-research-table thead th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.competitive-research-table tbody td {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.competitive-research-table tbody tr td:first-child {
+  border-right: 1px solid var(--border-subtle);
+  width: 22%;
+}
+
+.competitive-research-cell {
+  margin: 0;
+}
+
+.competitive-research-placeholder {
+  color: var(--muted);
+}
+
+.swot-wrap {
+  width: 100%;
+}
+
+.swot-title {
+  font-size: 1.55rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.swot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.swot-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+}
+
+.swot-competitor-name {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.swot-findings {
+  margin: 0;
+  color: var(--muted);
+  white-space: pre-wrap;
+}
+
+.audience-demographic h3 {
+  font-size: 1.05rem;
+}
+
+.audience-text-block h3 {
+  font-size: 1rem;
+  margin: 0 0 0.4rem;
+  font-weight: 600;
+}
+
+.problem-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+}
+
+.problem-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.problem-card p {
+  margin: 0;
+}
+
+.purpose-goals {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  list-style-position: outside;
+}
+
+.purpose-goals > li {
+  padding-left: 0.35rem;
+}
+
+.purpose-goals > li > strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.purpose-goals ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.audience-bullets {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.audience-bullets li {
+  margin: 0;
+  padding-left: 0.15rem;
+}
+
+.purpose-goals ul li {
+  margin: 0;
+  padding-left: 0.15rem;
+}
+
+/* Case study: persona image under “Who am I designing for?” */
+.persona-image-wrap {
+  margin-top: 0.25rem;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+}
+
+.section-body > p + .persona-image-wrap {
+  /* `.section-body` already uses `gap`, so remove extra top margin right after paragraphs */
+  margin-top: 0;
+}
+
+.persona-image-wrap + .persona-image-wrap {
+  margin-top: 1rem;
+}
+
+.persona-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.role-left {
+  min-width: 0;
+}
+
+.role-description {
+  margin: 0;
+  color: var(--muted);
+}
+
+.role-phones-body {
+  gap: 0;
+}
+
+.role-phones {
+  margin-top: 0;
+  max-width: none;
+}
+
+.role-image-full .persona-image-wrap {
+  margin-top: 0;
+  /* Keep the image block from becoming too wide/tall */
+  max-width: 54rem;
+  margin-inline: auto;
+}
+
+.role-phones img {
+  /* Show the full image (no cropping) */
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.branding-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 4rem;
+  align-items: start;
+}
+
+.branding-two-col-text {
+  min-width: 0;
+}
+
+.branding-two-col-media {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-self: end;
+  width: 100%;
+  max-width: 32rem;
+}
+
+.branding-two-col-media .persona-image-wrap {
+  margin-top: 0;
+  max-width: 26rem;
+  margin-inline: auto;
+}
+
+.branding-logo-grid {
+  margin-top: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1fr) 1fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.branding-logo-grid .persona-image-wrap {
+  margin-top: 0;
+}
+
+.branding-logo-grid .persona-image-wrap:nth-child(1) {
+  grid-column: 2;
+}
+
 .case-study-inline {
   margin-top: 1rem;
+}
+
+.case-study-inline.project-featured-image-contained {
+  height: min(100vh, 950px);
+  max-height: min(100vh, 950px);
+  box-shadow: none;
+}
+
+.case-study-inline.project-featured-image-contained img,
+.case-study-inline.project-featured-image img {
+  max-height: none;
 }
 
 .case-study-btn {
@@ -501,6 +906,28 @@ h3 {
   color: var(--muted);
 }
 
+/* Add extra breathing room when a section paragraph sits directly under an h2 */
+.section-header > h2 + p,
+.section-body > h2 + p {
+  margin-top: 0.9rem;
+}
+
+/* Stacked case-study sections: add clear space between heading and first text block */
+.section-inner:not(.two-col) > h2 + p,
+.section-inner:not(.two-col) > h2 + .section-body {
+  margin-top: 1rem;
+}
+
+/* Iterra page: add extra room before footer */
+.page-iterra main {
+  padding-bottom: 2.5rem;
+}
+
+/* Guitars page: add extra room before footer */
+.page-guitars main {
+  padding-bottom: 2.5rem;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -547,6 +974,10 @@ h3 {
   padding: 0.4rem 0.9rem;
   background: rgba(255, 255, 255, 0.9);
   border: 1px dashed rgba(148, 163, 184, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Overlay: centered text, only on hover (home projects) */
@@ -1094,8 +1525,32 @@ a.nav-name:hover {
 }
 
 @media (max-width: 900px) {
+  :root {
+    --section-spacing: 3rem;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 1.1rem;
+  }
+
+  .problem-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .swot-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .project-hero-image {
     height: 320px;
+  }
+
+  .project-thumbnail {
+    height: 460px;
   }
 
   .nav-logo {
@@ -1115,6 +1570,18 @@ a.nav-name:hover {
   .section-inner.two-col {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .role-phones-section.section-inner.two-col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .role-image-full .persona-image-wrap {
+    max-width: none;
+  }
+
+  .role-phones img {
+    max-height: 320px;
+  }
   .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1126,21 +1593,50 @@ a.nav-name:hover {
   .floating-nav {
     gap: 1rem;
     padding-inline: 1rem;
+    width: calc(100% - 2.2rem);
   }
 
   .main-nav {
     gap: 0.55rem;
     font-size: 0.8rem;
   }
+
+  .branding-logo-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .branding-two-col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .branding-logo-grid .persona-image-wrap:nth-child(1) {
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 700px) {
+  :root {
+    --section-spacing: 2.5rem;
+  }
+
+  .container {
+    padding: 0 1.2rem;
+  }
+
   .project-hero-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .project-hero-image {
     height: 240px;
+  }
+
+  .hero-photo {
+    height: 340px;
+  }
+
+  .project-featured-image {
+    height: auto !important;
   }
 
   .nav-name-text {
@@ -1208,11 +1704,30 @@ a.nav-name:hover {
   }
 
   .hero {
-    padding-top: 3.2rem;
+    padding-top: 2.2rem;
   }
 
   .projects-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-thumbnail {
+    height: 360px;
+  }
+
+  .hero-text {
+    font-size: 1.05rem;
+  }
+
+  .info-strip-inner {
+    gap: 1.6rem;
+    padding: 0.8rem 1.2rem;
+    letter-spacing: 0.09em;
+    font-size: 0.8rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.4rem;
   }
 
   .skills-grid {
@@ -1222,6 +1737,67 @@ a.nav-name:hover {
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-spacing: 2.15rem;
+  }
+
+  .container {
+    padding: 0 1.1rem;
+  }
+
+  .site-header {
+    padding-top: 0.75rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .floating-nav {
+    padding: 0.55rem 0.75rem;
+    width: calc(100% - 1.25rem);
+    gap: 0.6rem;
+  }
+
+  .nav-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.7rem, 6.2vw, 2.2rem);
+  }
+
+  .hero-photo {
+    height: 280px;
+  }
+
+  .project-hero-image {
+    height: 210px;
+  }
+
+  .project-thumbnail {
+    height: 280px;
+  }
+
+  .competitive-research-table th,
+  .competitive-research-table td {
+    padding: 0.65rem 0.7rem;
+    font-size: 0.84rem;
+  }
+
+  .back-to-top {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 

@@ -8,6 +8,7 @@
       name="description"
       content="Ultimate Guitar Tabs — UX research & interface redesign. Design project by Maria Paula Gomez."
     />
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +17,9 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="page-guitars">
     <span id="top" aria-hidden="true"></span>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="floating-nav">
         <a href="index.html" class="nav-name" aria-label="Home">
@@ -44,7 +46,7 @@
         >
           <span class="nav-toggle-icon" aria-hidden="true"></span>
         </button>
-        <nav class="main-nav" id="primary-nav">
+        <nav class="main-nav" id="primary-nav" aria-label="Primary navigation">
           <div class="nav-links">
             <a href="index.html#projects">Work</a>
             <a href="index.html#skills">Skills</a>
@@ -56,33 +58,36 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero project-hero">
         <div class="container hero-centered">
           <p class="eyebrow">Project</p>
           <h1 class="hero-title">Ultimate Guitar Tabs 🎸</h1>
-          <p class="hero-text hero-text-centered">
-            UX research &amp; interface redesign
-          </p>
+          <p class="hero-text hero-text-centered">UX research &amp; interface redesign</p>
+        </div>
+      </section>
+
+      <section class="section project-featured-image-section">
+        <div class="container">
           <div class="project-hero-grid">
             <div class="project-hero-image">
-              <img src="images/guitars-01.jpg" alt="Ultimate Guitar Tabs screen" />
+              <img src="images/guitars-main.jpg" alt="Ultimate Guitar Tabs — main visual" />
             </div>
             <div class="project-hero-image">
-              <img src="images/guitars-main.jpg" alt="Ultimate Guitar Tabs — UX research & interface redesign" />
+              <img src="images/guitars-01.jpg" alt="Ultimate Guitar Tabs app screen" />
             </div>
             <div class="project-hero-image">
-              <img src="images/guitars-02.jpg" alt="Ultimate Guitar Tabs screen" />
+              <img src="images/guitars-02.jpg" alt="Ultimate Guitar Tabs app screen" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="project-detail">
+      <section class="section section--flush-bottom" id="project-detail">
         <div class="container section-inner two-col">
           <div>
             <p class="eyebrow">Overview</p>
-            <h2>About this project</h2>
+            <h2>About This Project</h2>
           </div>
           <div class="section-body">
             <p>
@@ -108,45 +113,100 @@ learning environments in today’s digital landscape.
             </p>
           </div>
         </div>
+
         <div class="container" aria-hidden="true">
           <div class="section-divider"></div>
         </div>
+
         <div class="container section-inner two-col">
           <div>
+            <p class="eyebrow">Challenge</p>
+            <h2>Main Problem</h2>
+          </div>
+          <div class="section-body">
+            <p>The original Ultimate Guitar Tabs website feels cluttered, inconsistent, and overwhelming for users. Its disorganized homepage, outdated visuals, and excessive ads make it difficult to navigate or understand where to start. Beginners struggle to find guidance and experienced players are frustrated by unreliable search results and repeated pop-ups. Overall, the site fails to provide a smooth, intuitive experience that supports users in learning and exploring music.</p>
+            <p>The redesign focuses on creating a cleaner, more intuitive interface with clear navigation and consistent visuals. By simplifying the homepage, improving search and filtering functions, and organizing content by skill level, the new design makes it easier for users to find accurate tabs and tutorials. It also enhances the overall experience with a more welcoming, user-centered layout.
+            </p>
+          </div>
+        </div>
+
+        <div class="container" aria-hidden="true">
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="container section-inner two-col role-phones-section">
+          <div class="role-left">
             <p class="eyebrow">Role</p>
             <h2>My Role</h2>
           </div>
-          <div class="section-body">
-            <p>
+          <div class="section-body role-phones-body">
+            <p class="role-description">
               UX/UI Designer: user research, personas, wireframing,
 prototyping, and usability testing. Focused on research-driven
 UX decisions and iterative testing.
             </p>
           </div>
         </div>
+
         <div class="container" aria-hidden="true">
           <div class="section-divider"></div>
         </div>
-        <div class="container section-inner two-col">
-          <div>
-            <p class="eyebrow">Software</p>
-            <h2>Software Used</h2>
+
+        <div class="container section-inner two-col role-phones-section">
+          <div class="role-left">
+            <p class="eyebrow">Research</p>
+            <h2>User Research Goals</h2>
           </div>
-          <div class="section-body">
-            <div class="tool-icons" aria-label="Software used">
-              <span class="tool-icon" aria-label="Adobe Photoshop">
-                <img src="images/photoshop.png" alt="Adobe Photoshop" loading="lazy" decoding="async" />
-              </span>
-              <span class="tool-icon" aria-label="Adobe Illustrator">
-                <img src="images/illustrator.png" alt="Adobe Illustrator" loading="lazy" decoding="async" />
-              </span>
-              <span class="tool-icon" aria-label="Figma">
-                <img src="images/figma.png" alt="Figma" loading="lazy" decoding="async" />
-              </span>
-            </div>
+          <div class="section-body role-phones-body">
+            <p class="role-description">
+              To understand how users search for guitar tabs, chords, and/or tutorials and identify what are the main issues they face in this process that prevent them from quickly and easily finding what they are looking for. 
+              To analyze how users engage with different features on the website, such as the ‘#WHATSUP’, lesson sharing, and rating sections, and identify opportunities to make these more intuitive, motivating, and supportive for the guitar community.               
+            </p>
+          </div>
+        </div>
+
+        <div class="container" aria-hidden="true">
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="container section-inner two-col role-phones-section">
+          <div class="role-left">
+            <p class="eyebrow">Research</p>
+            <h2>Pain Points</h2>
+          </div>
+          <div class="section-body role-phones-body">
+            <p class="role-description">
+              Hard to find relevant tabs for beginners who don't know the right terminology -  the filtering system is outdated and cluttered.   
+Navigation is disorganized and overwhelming / unappealing design - the homepage feels crowded and not intuitive.
+Lack of personalization - no way of recommending tabs or tutorials based on the user’s skill level. It's a very one-size-fits-all experience, and that's not ideal. 
+Poor usability in the mobile version - feels way too cramped, buttons are too small, non-intuitive navigation, and most of the page is taken up by unrelated information.   
+Too aggressive with the Pro subscription advertising.
+Too much unrelated content - tabs like #WHATSUP are distracting and irrelevant.</p>
+          </div>
+        </div>
+
+        <div class="container" aria-hidden="true">
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="container section-inner two-col role-phones-section">
+          <div class="role-left">
+            <p class="eyebrow">Research</p>
+            <h2>Problem Statements</h2>
+          </div>
+          <div class="section-body role-phones-body">
+            <p class="role-description">
+              Overwhelming and Disorganized Homepage: Users feel lost and confused upon entering the site due to cluttered layouts, excessive text, and poor hierarchy of information.
+Inefficient Search and Filtering System: Users struggle to quickly find accurate or relevant tabs because the search results are inconsistent, filters are outdated, and the interface feels unintuitive.
+Lack of Clear Guidance for Beginners: First-time or non-musician users are unsure where to start, as the site lacks visual cues, onboarding, or clear pathways based on skill level.
+Inconsistent Visual and Functional Design: Page layouts, navigation bars, and features change unpredictably across sections, creating confusion and reducing trust in the interface.
+Distracting and Unrelated Content: Sections like “#WHATSUP” and excessive ads dominate the main page, shifting attention away from the site’s core purpose — learning and playing guitar.
+Aggressive Monetization Experience: Constant pop-ups and redirects to “Pro” subscriptions interrupt user flow, making the experience frustrating and unwelcoming.</p>
           </div>
         </div>
       </section>
+
+      
     </main>
 
     <footer class="site-footer">
@@ -168,11 +228,5 @@ UX decisions and iterative testing.
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-      const yearSpan = document.getElementById("year");
-      if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-      }
-    </script>
   </body>
 </html>

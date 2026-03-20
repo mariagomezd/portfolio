@@ -8,6 +8,7 @@
       name="description"
       content="Scarlett — UX/UI for jewelry shopping app concept. Design project by Maria Paula Gomez."
     />
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +19,7 @@
   </head>
   <body>
     <span id="top" aria-hidden="true"></span>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="floating-nav">
         <a href="index.html" class="nav-name" aria-label="Home">
@@ -44,7 +46,7 @@
         >
           <span class="nav-toggle-icon" aria-hidden="true"></span>
         </button>
-        <nav class="main-nav" id="primary-nav">
+        <nav class="main-nav" id="primary-nav" aria-label="Primary navigation">
           <div class="nav-links">
             <a href="index.html#projects">Work</a>
             <a href="index.html#skills">Skills</a>
@@ -56,20 +58,23 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero project-hero">
         <div class="container hero-centered">
           <p class="eyebrow">Project</p>
           <h1 class="hero-title">Scarlett 💍</h1>
-          <p class="hero-text hero-text-centered">
-            UX/UI for jewelry shopping app concept
-          </p>
+          <p class="hero-text hero-text-centered">UX/UI for jewelry shopping app concept</p>
+        </div>
+      </section>
+
+      <section class="section project-featured-image-section">
+        <div class="container">
           <div class="project-hero-grid">
             <div class="project-hero-image">
               <img src="images/scarlett-01.jpg" alt="Scarlett app screen" />
             </div>
             <div class="project-hero-image">
-              <img src="images/scarlett-main.jpg" alt="Scarlett — UX/UI for jewelry shopping app concept" />
+              <img src="images/scarlett-main.jpg" alt="Scarlett — main visual" />
             </div>
             <div class="project-hero-image">
               <img src="images/scareltt-02.jpg" alt="Scarlett app screen" />
@@ -78,11 +83,11 @@
         </div>
       </section>
 
-      <section class="section" id="project-detail">
+      <section class="section section--flush-bottom" id="project-detail">
         <div class="container section-inner two-col">
           <div>
             <p class="eyebrow">Overview</p>
-            <h2>About this project</h2>
+            <h2>About This Project</h2>
           </div>
           <div class="section-body">
             <p>
@@ -107,41 +112,206 @@ experiences in today’s fashion landscape.
             </p>
           </div>
         </div>
+
         <div class="container" aria-hidden="true">
           <div class="section-divider"></div>
         </div>
+
         <div class="container section-inner two-col">
           <div>
+            <p class="eyebrow">Challenge</p>
+            <h2>Main Problem</h2>
+          </div>
+          <div class="section-body">
+            <p>The main problem is that users are overwhelmed by fast fashion and repetitive styles. They want digital experiences that feel curated, aesthetic, and reliable, mirroring boutique-level service. Additionally, many users find it difficult to buy accessories. They struggle to style jewelry confidently and wish the process felt easier, more guided, and more intuitive. That's why We introduced a feature that lets users purchase complete, pre-styled looks at a lower price. This experience removes the guesswork from styling and makes buying jewelry simpler and more intuitive. Users can browse sets, feel confident in their choices, and enjoy a more guided shopping experience while saving money.</p>
+          </div>
+        </div>
+
+        <div class="container" aria-hidden="true">
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="container section-inner two-col role-phones-section">
+          <div class="role-left">
             <p class="eyebrow">Role</p>
             <h2>My Role</h2>
           </div>
-          <div class="section-body">
-            <p>
+          <div class="section-body role-phones-body">
+            <p class="role-description">
               UX/UI Designer: concept development, visual direction,
-prototyping, and user testing. Focused on visual identity, UX
-and shopping experience refinement.
+  prototyping, and user testing. Focused on visual identity, UX
+  and shopping experience refinement.
             </p>
+          </div>
+          <div class="role-image-full">
+            <div class="persona-image-wrap role-phones">
+              <img
+                src="images/phones.png"
+                alt="Scarlett — phone screenshots illustrating my role"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container" aria-hidden="true">
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="container section-inner">
+          <p class="eyebrow">The Structure</p>
+          <h2>Designing With Purpose</h2>
+          <div class="section-body">
+            <p>Our main goal was to deliver a sleek, modern, and premium-feeling experience that reflects the brand’s trendy streetwear jewelry focus while keeping the interface approachable and centered on celebrating unique pieces that help young urban women express their individuality. Use clean layouts, bold visuals, and intuitive navigation to make browsing and purchasing effortless, and ensure the color palette, typography, and imagery consistently reinforce the brand’s fashion identity. Prioritize high-quality, aesthetic photography styled with vintage-inspired fashion to create an authentic and compelling connection with the audience.</p>
+          </div>
+        </div>
+
+        <div class="container" aria-hidden="true">
+          <div class="section-divider"></div>
+        </div>
+      </section>
+
+      <section class="section" id="design-process">
+        <div class="container section-inner">
+          <p class="eyebrow">Discover - Define - Design</p>
+          <h2>Who Were We Designing For?</h2>
+          <div class="section-body">
+            <p>Our main buyer is a young female who lives in or around urban areas and enjoys expressing herself through fashion. She sees accessories as a key part of her identity and, rather than following the boring popular trends, she looks for unique, creative, and high-quality pieces that help her stand out and reflect who she is. </p>
+            <div class="audience-text-grid" aria-label="Audience info">
+              <div class="audience-text-block audience-demographic" role="group">
+                <h3>Demographic Info:</h3>
+                <ul class="audience-bullets">
+                  <li>Age Range: 16 to 30 years old.</li>
+                  <li>Location: Big cities or metropolitan areas.</li>
+                  <li>Lifestyle: students, young-bold professionals, fashion-lovers, creatives with an active social life.</li>
+                  <li>Income level: moderate to high. Willing to invest in quality and uniqueness.</li>
+                  <li>Device use: big mobile users, primarily iOS.</li>
+                </ul>
+              </div>
+              <div class="audience-text-block" role="group">
+                <h3>User Needs:</h3>
+                <ul class="audience-bullets">
+                  <li>A smooth, trustworthy shopping experience</li>
+                  <li>Unique and creative accessories that reflect personal style</li>
+                  <li>Authenticity and transparency from sellers</li>
+                  <li>Convenient browsing and easy checkout</li>
+                </ul>
+              </div>
+              <div class="audience-text-block" role="group">
+                <h3>Psychographic Info:</h3>
+                <ul class="audience-bullets">
+                  <li>Values: self-expression, confidence, and authenticity.</li>
+                  <li>Personality: trend-aware but not trend-follower. Enjoys personalized and out-of-the-box aesthetics.</li>
+                  <li>Motivations: Wants to look stylish and put-together always without having to rely just on popular brand names.</li>
+                  <li>Interests: fashion, design, art, social media inspiration (Pinterest & Instagram).</li>
+                  <li>Shopping behaviour: prefers brands that offer exclusivity, style inspiration, and a smooth digital experience.</li>
+                  <li>Aesthetic Preferences: leans toward vintage-inspired or contemporary luxury styles.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="container" aria-hidden="true">
           <div class="section-divider"></div>
         </div>
-        <div class="container section-inner two-col">
-          <div>
-            <p class="eyebrow">Software</p>
-            <h2>Software Used</h2>
-          </div>
+      </section>
+
+      <section class="section" id="competitive-research">
+        <div class="container section-inner">
+          <p class="eyebrow">Research</p>
+          <h2 class="competitive-research-title">Competitive Research Summary</h2>
           <div class="section-body">
-            <div class="tool-icons" aria-label="Software used">
-              <span class="tool-icon" aria-label="Adobe Photoshop">
-                <img src="images/photoshop.png" alt="Adobe Photoshop" loading="lazy" decoding="async" />
-              </span>
-              <span class="tool-icon" aria-label="Adobe Illustrator">
-                <img src="images/illustrator.png" alt="Adobe Illustrator" loading="lazy" decoding="async" />
-              </span>
-              <span class="tool-icon" aria-label="Figma">
-                <img src="images/figma.png" alt="Figma" loading="lazy" decoding="async" />
-              </span>
+            <p>We analyzed three jewelry apps (Evry Jewels, GLD, and STUDIOCULT) to understand visual identity, navigation patterns, user flow, and branding strategies across affordable, luxury, and artistic jewelry markets. </p>
+            <div class="competitive-research-wrap" aria-label="Competitive research summary">
+              <div class="competitive-research-table-wrap">
+                <table class="competitive-research-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">App Name</th>
+                      <th scope="col">Key Findings</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p class="competitive-research-cell competitive-research-placeholder">Evry Jewels</p>
+                      </td>
+                      <td>
+                        <p class="competitive-research-cell competitive-research-placeholder">
+                          Trendy and affordable with strong influencer culture, but the app feels cheap due to tight spacing, outdated graphics, and forced add-ons during checkout. Good use of category images, FAQs, and size guides that we plan to adapt.
+
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="competitive-research-cell competitive-research-placeholder">GLD</p>
+                      </td>
+                      <td>
+                        <p class="competitive-research-cell competitive-research-placeholder">
+                          Clean, modern, luxurious interface with excellent spacing, premium photography, and highly organized navigation. Strong brand identity but high prices and a celebrity-focused brand feel may alienate some users.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="competitive-research-cell competitive-research-placeholder">STUDIOCULT</p>
+                      </td>
+                      <td>
+                        <p class="competitive-research-cell competitive-research-placeholder">
+                          Artistic, experimental, and visually unique with neon accents, playful typography, and GIFs. Creative but sometimes repetitive and less polished in UX, with elements like non-collapsible sections and inaccessible pages before login.
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="swot-wrap" aria-label="SWOT summary across competitors">
+              <h2 class="swot-title">SWOT Summary Across Competitors</h2>
+              <div class="swot-grid">
+                <div class="swot-card">
+                  <p class="swot-competitor-name">Strengths (S)</p>
+                  <p class="swot-findings">Distinct brand identities: trendy, luxury, and artistic. Solid influencer partnerships and social media influence.High-quality imagery and recognizable color systems.Diverse product ranges and curated collections.</p>
+                </div>
+                <div class="swot-card">
+                  <p class="swot-competitor-name">Weaknesses (W)</p>
+                  <p class="swot-findings">UX issues such as forced add-ons, outdated banners, repetitive categories, or confusing flows. Some apps feel cheap while others feel inaccessible due to high price points. Limited personalization and customization options. Lack of model photography in some brands reduces relatability.</p>
+                </div>
+                <div class="swot-card">
+                  <p class="swot-competitor-name">Opportunities (O)</p>
+                  <p class="swot-findings">Increasing demand for stylish, accessible jewelry with stronger brand storytelling. Room for more personalization, recommendations, recently viewed, guided support. Potential for curated looks, better imagery, and improved category systems.</p>
+                </div>
+                <div class="swot-card">
+                  <p class="swot-competitor-name">Threats (T)</p>
+                  <p class="swot-findings">Highly saturated jewelry and accessories market. Fast-changing trends + algorithmic unpredictability. Competition from luxury and fast-fashion brands with bigger budgets. Risk of poor UX lowering brand trust, especially for online-only stores.</p>
+                </div>
+              </div>
+            </div>
+            <div class="persona-image-wrap">
+              <img
+                src="images/persona1.png"
+                alt="Scarlett — user persona 1"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="persona-image-wrap">
+              <img
+                src="images/persona2.png"
+                alt="Scarlett — user persona 2"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="persona-image-wrap">
+              <img
+                src="images/persona3.png"
+                alt="Scarlett — user persona 3"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
@@ -167,11 +337,5 @@ and shopping experience refinement.
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-      const yearSpan = document.getElementById("year");
-      if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-      }
-    </script>
   </body>
 </html>

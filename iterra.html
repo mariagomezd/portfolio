@@ -8,6 +8,7 @@
       name="description"
       content="Iterra — App prototype for trip planning. UX & UI design project by Maria Paula Gomez."
     />
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +17,9 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="page-iterra">
     <span id="top" aria-hidden="true"></span>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="floating-nav">
         <a href="index.html" class="nav-name" aria-label="Home">
@@ -44,7 +46,7 @@
         >
           <span class="nav-toggle-icon" aria-hidden="true"></span>
         </button>
-        <nav class="main-nav" id="primary-nav">
+        <nav class="main-nav" id="primary-nav" aria-label="Primary navigation">
           <div class="nav-links">
             <a href="index.html#projects">Work</a>
             <a href="index.html#skills">Skills</a>
@@ -56,7 +58,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero project-hero">
         <div class="container hero-centered">
           <p class="eyebrow">Project</p>
@@ -64,35 +66,22 @@
           <p class="hero-text hero-text-centered">
             App prototype for trip planning
           </p>
-          <div class="project-hero-grid">
-            <div class="project-hero-image">
-              <img src="images/iterra-main.jpg" alt="Iterra — App prototype for trip planning" />
-            </div>
-            <div class="project-hero-image">
-              <img src="images/iterra-01.jpg" alt="Iterra app screen" />
-            </div>
-            <div class="project-hero-image">
-              <img src="images/iterra-02.jpg" alt="Iterra app screen" />
-            </div>
+        </div>
+      </section>
+
+      <section class="section project-featured-image-section">
+        <div class="container">
+          <div class="project-hero-image project-featured-image">
+            <img src="images/Iterra-CaseStudy-01.jpg" alt="Iterra case study main visual" />
           </div>
         </div>
       </section>
 
-      <section class="section" id="project-detail">
+      <section class="section section--flush-bottom" id="project-detail">
         <div class="container section-inner two-col">
           <div>
             <p class="eyebrow">Overview</p>
             <h2>About This Project</h2>
-            <div class="case-study-inline">
-              <a
-                class="btn case-study-btn"
-                href="https://www.behance.net/gallery/240089825/Iterra-App-Prototype"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Go to Case Study
-              </a>
-            </div>
           </div>
           <div class="section-body">
             <p>
@@ -115,36 +104,197 @@ goal in today’s travel tech landscape.
         </div>
         <div class="container section-inner two-col">
           <div>
-            <p class="eyebrow">Role</p>
-            <h2>My Role</h2>
+            <p class="eyebrow">Challenge</p>
+            <h2>Main Problem</h2>
           </div>
           <div class="section-body">
             <p>
-              Product & UX Designer: complete concept, user flows,
-wireframing, and interactive prototyping. Focused on defining
-the product vision and translating research into clear flows.
+              At its core, the project addresses a simple problem: Most travel planning tools are overwhelming, expensive, or lack personalization.
+Iterra aims to simplify the process while giving travelers more control, confidence, and creativity in shaping their journey.
             </p>
+            
           </div>
         </div>
         <div class="container" aria-hidden="true">
           <div class="section-divider"></div>
         </div>
-        <div class="container section-inner two-col">
-          <div>
-            <p class="eyebrow">Software</p>
-            <h2>Software Used</h2>
+        <div class="container section-inner two-col role-phones-section">
+          <div class="role-left">
+            <p class="eyebrow">Role</p>
+            <h2>My Role</h2>
           </div>
+          <div class="section-body role-phones-body">
+            <p class="role-description">
+              Product & UX Designer: complete concept, user flows,
+wireframing, and interactive prototyping. Focused on defining
+the product vision and translating research into clear flows. Also, I developed the branding, guiding lterra from early ideation to a fully designed visual concept. 
+            </p>
+          </div>
+        </div>
+        
+        <div class="container">
+          <div class="project-hero-grid">
+            <div class="project-hero-image">
+              <img src="images/iterra-main.jpg" alt="Iterra — App prototype for trip planning" />
+            </div>
+            <div class="project-hero-image">
+              <img src="images/iterra-01.jpg" alt="Iterra app screen" />
+            </div>
+            <div class="project-hero-image">
+              <img src="images/iterra-02.jpg" alt="Iterra app screen" />
+            </div>
+          </div>
+        </div>
+        <div class="container" aria-hidden="true">
+          <div class="section-divider"></div>
+        </div>
+        <div class="container section-inner">
+          <p class="eyebrow">The Structure</p>
+          <h2>Designing With Purpose</h2>
           <div class="section-body">
-            <div class="tool-icons" aria-label="Software used">
-              <span class="tool-icon" aria-label="Adobe Photoshop">
-                <img src="images/photoshop.png" alt="Adobe Photoshop" loading="lazy" decoding="async" />
-              </span>
-              <span class="tool-icon" aria-label="Adobe Illustrator">
-                <img src="images/illustrator.png" alt="Adobe Illustrator" loading="lazy" decoding="async" />
-              </span>
-              <span class="tool-icon" aria-label="Figma">
-                <img src="images/figma.png" alt="Figma" loading="lazy" decoding="async" />
-              </span>
+            <p>
+              The main objective of this project was to design lterra as a cohesive and fully realized digital product, from its visual identity to its interactive prototype. The goals focused on building a strong brand foundation, crafting an intuitive user experience, and presenting the opp in a compelling final showcase. Specifically, the goals included:
+            </p>
+            <ol class="purpose-goals" aria-label="Design goals for Iterra">
+              <li>
+                <strong>Build lterra's Complete Branding System</strong>
+                <ul>
+                  <li>Develop a memorable and cohesive visual identity.</li>
+                  <li>
+                    Create a solid logo, color palette, and typography system that reflects the spirit
+                    of exploration, freedom, and modern travel.
+                  </li>
+                  <li>
+                    Establish a consistent visual language that carries across the app and promotional
+                    materials.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Design the lterra Mobile App Prototype</strong>
+                <ul>
+                  <li>Create a user-friendly interface prioritizing simplicity, clarity, and ease of use.</li>
+                  <li>
+                    Design screens, interactions, and flows that support trip discovery, personalized
+                    tours, and seamless navigation.
+                  </li>
+                  <li>Ensure that every UI decision enhances accessibility and a smooth user journey.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Produce a Final Demo with Interactions</strong>
+                <ul>
+                  <li>
+                    Deliver a polished interactive prototype showcasing lterra's core features and travel
+                    experience.
+                  </li>
+                  <li>
+                    Create supporting visual materials—including posters for a social media mini-campaign—to
+                    demonstrate how the brand extends beyond the app.
+                  </li>
+                  <li>
+                    Present the project as a cohesive narrative from branding, to design, to final execution.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="container" aria-hidden="true">
+          <div class="section-divider"></div>
+        </div>
+      </section>
+
+      <section class="section" id="design-process">
+        <div class="container section-inner">
+          <p class="eyebrow">Discover - Define - Design</p>
+          <h2>Who am I Designing For?</h2>
+          <div class="section-body">
+            <p>
+              These are millennial and Gen Z travelers (ages 20–40) who love to explore new destinations but dislike 
+traditional, expensive, and rigid travel tours. They want freedom, personalization, and authenticity in their  adventures. These travelers may not plan long in advance but still want organized, meaningful experiences. They rely on apps to guide them spontaneously once they arrive at a destination.
+
+Key Traits: Mobile-first oriented. Value authentic, local, and cultural encounters. Often use digital tools (Google Maps, TripAdvisor, Airbnb Experiences, Instagram) to plan trips. Seek practical tools to make travel easier and cheaper. 
+
+            </p>
+            <div class="persona-image-wrap">
+              <img
+                src="images/persoa.jpg"
+                alt="Iterra user persona: millennial and Gen Z traveler who plans trips on mobile"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="persona-image-wrap">
+              <img
+                src="images/competitive.jpg"
+                alt="Iterra competitive analysis comparing travel and trip planning apps"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div
+            class="project-hero-image project-featured-image project-featured-image-contained case-study-inline"
+          >
+            <img
+              src="images/Iterra-CaseStudy-03.jpg"
+              alt="Iterra case study — design process"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+        <div class="container" aria-hidden="true">
+          <div class="section-divider"></div>
+        </div>
+      </section>
+
+      <section class="section" id="branding" aria-labelledby="branding-heading">
+        <div class="container section-inner">
+          <p class="eyebrow">The Essence</p>
+          <h2 id="branding-heading">Branding</h2>
+          <div class="section-body">
+            <div class="branding-two-col">
+              <div class="branding-two-col-text">
+                <p>
+                  The Iterra logo embodies the spirit of exploration and connection to the world. The name itself combines two Latin words, iter, meaning “journey” or “route,” and terra, meaning “earth,” “land,” or “ground.” Together, they capture the essence of discovering the world through personal journeys.
+
+                  The logo’s playful, rounded typography and teal plus orange colors give it an approachable and adventurous feel, while the soft green background evokes freshness and nature.
+
+                  Designed to resemble a fun travel sticker, the logo reflects Iterra’s youthful energy and journey-focused identity.
+                </p>
+                <h3>Clear Space & Size</h3>
+                <p>
+                  To ensure legibility and brand visibility, the Iterra logo should never appear smaller than for print: 45 mm (width) and digital: 150 px (width).
+                  To protect the logo’s visibility and ensure visual balance, always maintain minimum clear space around it. This space must remain free of any text, images, or graphic elements. When displayed at its original size (450 px width), the minimum clear space is left and right: 42 px, top: 23 px, bottom: 31 px.
+                  For resized versions, apply these proportions relative to the logo’s width: Left and right: 0.093× logo width, top: 0.051× logo width, bottom: 0.069× logo width.
+                </p>
+
+                <h3>DO NOT</h3>
+                <p>Do not alter or change the logo’s primary background tones. Do not distort or stretch. Never squeeze or rotate the logo. Do not add effects, drop shadows, gradients, outlines, or textures not part of the approved logo. Do not modify, replace, or redraw the custom letterforms. Do not remove or alter the outline/sticker effect, it’s an intentional part of the design concept. Do not place on low-contrast or busy backgrounds, prioritize clear visibility and contrast at all times. Do not crop, apply transparency or overlays.</p>
+              </div>
+
+              <div class="branding-two-col-media">
+                <div class="persona-image-wrap">
+                  <img
+                    src="images/logos.png"
+                    alt="Iterra logo system and brand marks"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="persona-image-wrap">
+                  <img
+                    src="images/spacing.png"
+                    alt="Iterra logo clear space and spacing guidelines"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -170,11 +320,5 @@ the product vision and translating research into clear flows.
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-      const yearSpan = document.getElementById("year");
-      if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-      }
-    </script>
   </body>
 </html>
